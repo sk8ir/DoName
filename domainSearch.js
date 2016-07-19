@@ -1,5 +1,3 @@
-domainSearch(['yo', '1', '1yo', 'yo1', 'y1o', 'po']);
-
 function domainSearch (keyWords){
 	var search = [],
 		errs = [],
@@ -9,8 +7,8 @@ function domainSearch (keyWords){
 
 	for (var w in keyWords) {
 		var word = keyWords[w];
-		var num = new RegExp(/.?[0-9].?/);
-		if (!word.match(num)) {
+		var alpha = new RegExp(/^[a-zA-Z]+$/);
+		if (word.match(alpha)) {
 			search.push(word);
 		}
 		else {

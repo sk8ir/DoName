@@ -1,0 +1,27 @@
+{
+  "name": "doname",
+  "version": "1.0.0",
+  "description": "DoName",
+  "main": "server/server.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ziwikiwi/DoName.git"
+  },
+  "keywords": [
+    "DoName"
+  ],
+  "author": "Zany Serpentine Jackalopes",
+  "homepage": "https://github.com/ziwikiwi/DoName",
+  "contributors": [
+    "Ziwei Ba <zba@godaddy.com>",
+    "Judith Fan <jfan@godaddy.com>",
+    "Samantha Kacir <skacir@godaddy.com>"
+  ],
+  "dependencies": {
+    "jsdom": "3.1.2",
+    "jquery": "2.2.0",
+    "xmlhttprequest": "1.8.0"
+  }
+}
