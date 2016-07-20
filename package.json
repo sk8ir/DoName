@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "DoName",
   "main": "server/server.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:ziwikiwi/DoName.git"
@@ -19,9 +18,15 @@
     "Judith Fan <jfan@godaddy.com>",
     "Samantha Kacir <skacir@godaddy.com>"
   ],
+
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  },
   "dependencies": {
     "jsdom": "3.1.2",
     "jquery": "2.2.0",
-    "xmlhttprequest": "1.8.0"
+    "xmlhttprequest": "1.8.0",
+    "requirejs": "2.2.0",
+    "webpack": "1.13.1"
   }
 }

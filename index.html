@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DoName</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+  </head>
+  <body>
+    <div class = "container">
+      <div class = "col-md-offset-3 col-md-6">
+        <h1>Tell us about your ideas.</h1>
+        <p class='subheading'>Enter a few words that describe your company. These can describe anything from your product to your company values.</p>
+        <form class="form-horizontal">
+          <div id="dynamicInput">
+            <div id="field"><input class="form-control" id="field1" name="prof1" type="text"/></div>
+            <div id="field"><input class="form-control" id="field2" name="prof2" type="text"/></div>
+          </div>
+        </form>
+        <div class = "text-center">
+          <button id='addWord' class="btn btn-default"> + Add another word</button>
+          <button id='submit' class="btn btn-success" onClick=>Do it</button>
+        </div>
+      </div>
+
+
+      <div class = "results col-md-offset-3 col-md-6">
+        <h3>Here are some ideas.</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id ="domain">
+          </tbody>
+        </table>
+      </div>
+
+      <div class = "no-results col-md-offset-3 col-md-6">
+        <h4>Sorry, no available domains found for the specified keywords.</h4>
+      </div>
+    </div>
+
+    <script
+    <script type="text/javascript" src="js/searchDomains.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.form-control {
+  margin: 15px 0px;
+}
+
+.results {
+  display:none;
+}
+
+.no-results{
+  display:none;
+  padding-top: 10px;
+}
+
+.results {
+  padding-top: 10px;
+}
