@@ -6457,7 +6457,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 				self.push(new Buffer(response))
 				break
 			}
-			// Falls through in IE8	
+			// Falls through in IE8
 		case 'text':
 			try { // This will fail when readyState = 3 in IE9. Switch mode and wait for readyState = 4
 				response = xhr.responseText
@@ -8232,7 +8232,7 @@ function domainSearch (keyWords){
 	        console.error(err);
 	        return;
 	    }
-	 
+
 	    $ = require("jquery")(window);
 
 		for (var n in names) {
@@ -8245,7 +8245,7 @@ function domainSearch (keyWords){
 				headers: {
 					"Authorization": "sso-key " + keyPair
 				},
-				success: function(body) { 
+				success: function(body) {
 					if (body.available) {
 						availDomains.push({
 							name: body.domain,
@@ -8261,7 +8261,7 @@ function domainSearch (keyWords){
 		}
 
 		if (availDomains.length === 0) {
-			return 'Sorry, no available domains found for the specified keywords.';
+			return null;
 		}
 
 		return availDomains;
@@ -19484,9 +19484,9 @@ module.exports = function (o) {
       ecmaVersion: 6,
       allowReturnOutsideFunction: true,
       ranges: true,
-      // collect comments in Esprima's format 
+      // collect comments in Esprima's format
       onComment: comments,
-      // collect token ranges 
+      // collect token ranges
       onToken: tokens
     });
 
@@ -34739,7 +34739,7 @@ base.ComprehensionExpression = function (node, st, c) {
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// UMD HEADER START 
+// UMD HEADER START
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
@@ -34822,7 +34822,7 @@ function request(options, callback) {
     else if(typeof options.body !== 'string')
       options.body = JSON.stringify(options.body)
   }
-  
+
   //BEGIN QS Hack
   var serialize = function(obj) {
     var str = [];
@@ -34832,7 +34832,7 @@ function request(options, callback) {
       }
     return str.join("&");
   }
-  
+
   if(options.qs){
     var qs = (typeof options.qs == 'string')? options.qs : serialize(options.qs);
     if(options.uri.indexOf('?') !== -1){ //no get params
@@ -34842,7 +34842,7 @@ function request(options, callback) {
     }
   }
   //END QS Hack
-  
+
   //BEGIN FORM Hack
   var multipart = function(obj) {
     //todo: support file type (useful?)
@@ -34865,7 +34865,7 @@ function request(options, callback) {
     result.type = 'multipart/form-data; boundary='+result.boundry;
     return result;
   }
-  
+
   if(options.form){
     if(typeof options.form == 'string') throw('form name unsupported');
     if(options.method === 'POST'){
@@ -36254,7 +36254,7 @@ CSSOM.CSSValueExpression.prototype._parseJSComment = function(token, idx) {
  * @return {Object|false}
  *					- idx:
  *					- text:
- *					or 
+ *					or
  *					false
  *
  */
@@ -36281,14 +36281,14 @@ CSSOM.CSSValueExpression.prototype._parseJSString = function(token, idx, sep) {
  * @return {Object|false}
  *				- idx:
  *				- regExp:
- *				or 
+ *				or
  *				false
  */
 
 /*
 
 all legal RegExp
- 
+
 /a/
 (/a/)
 [/a/]
@@ -54361,7 +54361,7 @@ exports.prepend = function(elem, prev){
 	if(elem.prev){
 		elem.prev.next = prev;
 	}
-	
+
 	prev.parent = parent;
 	prev.prev = elem.prev;
 	prev.next = elem;
@@ -64669,7 +64669,7 @@ exports.XMLHttpRequest = function() {
   this.responseXML = "";
   this.status = null;
   this.statusText = null;
-  
+
   // Whether cross-site Access-Control requests should be made using
   // credentials such as cookies or authorization headers
   this.withCredentials = false;

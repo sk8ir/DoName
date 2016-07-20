@@ -17,10 +17,10 @@ $(document).ready(function(){
       arr.push($(this).val());
     })
 
-    var domains = domainSearch(arr);
+    var domains = [{name: "name", price: "price", purchaseLink: "#"}];//domainSearch(arr);
 
     if (domains == null) {
-      $('no-results').css('display', 'block');
+      $('.no-results').css('display', 'block');
     } else {
       var addto = "#domain"
 
@@ -29,7 +29,7 @@ $(document).ready(function(){
         $(addto).append(newRow);
       })
 
-      $('results').css('display', 'block');
+      $('.results').css('display', 'block');
     }
   })
 });
