@@ -20,16 +20,16 @@ $(document).ready(function(){
     var domains = domainSearch(arr);
 
     if (domains == null) {
-      $('no-results').css('display:block');
+      $('no-results').css('display', 'block');
     } else {
       var addto = "#domain"
 
-      domains.each(function() {
-        var newRow = '<tr><td>' + $(this).name + '</td><td>' + $(this).price + '</td><td><a href="' + $(this).purchaseLink + '"><button class="btn btn-succes btn-xs">Select</button></a></td></tr>';
+      domains.forEach(function(n) {
+        var newRow = '<tr><td>' + n.name + '</td><td>' + n.price + '</td><td><a href="' + n.purchaseLink + '"><button class="btn btn-success btn-xs">Select</button></a></td></tr>';
         $(addto).append(newRow);
       })
 
-      $('results').css('display:block');
+      $('results').css('display', 'block');
     }
   })
 });
