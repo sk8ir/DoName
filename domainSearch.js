@@ -25,7 +25,7 @@ function domainSearch (keyWords){
 	        console.error(err);
 	        return;
 	    }
-	 
+
 	    $ = require("jquery")(window);
 
 		for (var n in names) {
@@ -38,7 +38,7 @@ function domainSearch (keyWords){
 				headers: {
 					"Authorization": "sso-key " + keyPair
 				},
-				success: function(body) { 
+				success: function(body) {
 					if (body.available) {
 						availDomains.push({
 							name: body.domain,
@@ -54,7 +54,7 @@ function domainSearch (keyWords){
 		}
 
 		if (availDomains.length === 0) {
-			return 'Sorry, no available domains found for the specified keywords.';
+			return null;
 		}
 
 		return availDomains;

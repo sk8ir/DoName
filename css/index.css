@@ -1,0 +1,11 @@
+.form-control {
+  margin: 15px 0px;
+}
+
+.results {
+  display:none;
+}
+
+.no-results{
+  display:none;
+}
